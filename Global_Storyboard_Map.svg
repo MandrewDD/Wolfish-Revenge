@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08121f"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="route" x1="0" x2="1"><stop stop-color="#55d7e7"/><stop offset="1" stop-color="#f7b84b"/></linearGradient>
+    <pattern id="human" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="14" height="14" fill="#3c2f36"/><rect width="5" height="14" fill="#d99b52" opacity=".45"/></pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#74d9e5"/></marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-weight:800;letter-spacing:2px;fill:#eff8ff}.sub{font-family:Arial,sans-serif;font-size:20px;fill:#a7bdcf}.node{stroke-width:3}.outdoor{fill:#12394a;stroke:#62d5e6}.human{fill:url(#human);stroke:#f2b75e}.boss{fill:#54283a;stroke:#ff7088}.final{fill:#792c3a;stroke:#ffb1ba}.label{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#f6fbff;text-anchor:middle}.small{font-family:Arial,sans-serif;font-size:16px;fill:#b9cddb;text-anchor:middle}.route{fill:none;stroke:url(#route);stroke-width:6;stroke-linecap:round;marker-end:url(#arrow)}.side{fill:none;stroke:#d49a56;stroke-width:4;stroke-dasharray:10 9;marker-end:url(#arrow)}.card{fill:#101e2e;stroke:#425b72;stroke-width:2}.cardtext{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#f4f8fb}.weapon{stroke:#f8c65c;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:none}.legend{font-family:Arial,sans-serif;font-size:16px;fill:#cad9e8}
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <path d="M0 850 C280 760 370 970 620 860 S990 760 1190 870 S1560 1000 1920 820" stroke="#244158" stroke-width="2" fill="none" opacity=".55"/>
+  <path d="M0 450 C260 380 400 520 640 420 S1080 340 1300 460 S1620 520 1920 420" stroke="#244158" stroke-width="2" fill="none" opacity=".4"/>
+  <text x="80" y="82" class="title" font-size="42">WOLFISH REVENGE</text>
+  <text x="82" y="115" class="sub">Глобальная схема прохождения · военный городок · черновик v0.1</text>
+
+  <!-- Main route -->
+  <path class="route" d="M210 455 L360 455"/><path class="route" d="M550 455 L700 455"/><path class="route" d="M870 455 L1010 455"/><path class="route" d="M1190 455 L1330 455"/><path class="route" d="M1500 455 L1630 455"/>
+  <path class="route" d="M1720 550 L1720 690"/><path class="route" d="M1620 790 L1450 790"/><path class="route" d="M1240 790 L1070 790"/><path class="route" d="M880 790 L690 790"/>
+
+  <!-- Nodes -->
+  <rect x="65" y="390" width="145" height="130" rx="10" class="node outdoor"/><text x="138" y="449" class="label">ЛЕС</text><text x="138" y="477" class="small">пролог</text>
+  <rect x="360" y="390" width="190" height="130" rx="10" class="node outdoor"/><text x="455" y="449" class="label">ЛАГЕРЬ</text><text x="455" y="477" class="small">первое оружие</text>
+  <rect x="700" y="390" width="170" height="130" rx="10" class="node outdoor"/><text x="785" y="449" class="label">АНГАРЫ</text><text x="785" y="477" class="small">филлерная зона</text>
+  <circle cx="1100" cy="455" r="90" class="node boss" filter="url(#glow)"/><text x="1100" y="447" class="label">БОСС 1</text><text x="1100" y="475" class="small">боец с РПК</text>
+  <rect x="1330" y="390" width="170" height="130" rx="10" class="node outdoor"/><text x="1415" y="449" class="label">ГОРОДОК</text><text x="1415" y="477" class="small">филлерная зона</text>
+  <circle cx="1720" cy="455" r="90" class="node boss" filter="url(#glow)"/><text x="1720" y="438" class="label">ДОРОГА</text><text x="1720" y="466" class="small">босс: БТР</text>
+  <rect x="1630" y="690" width="180" height="120" rx="10" class="node human"/><text x="1720" y="742" class="label">ВОЕННАЯ</text><text x="1720" y="770" class="label">ЧАСТЬ</text>
+  <circle cx="1345" cy="790" r="105" class="node boss" filter="url(#glow)"/><text x="1345" y="780" class="label">БОСС</text><text x="1345" y="809" class="small">вертолёт</text>
+  <rect x="880" y="725" width="190" height="130" rx="10" class="node outdoor"/><text x="975" y="784" class="label">ПОЛИГОН</text><text x="975" y="812" class="small">филлерная зона</text>
+  <circle cx="580" cy="790" r="110" class="node final" filter="url(#glow)"/><text x="580" y="780" class="label">ШТАБ</text><text x="580" y="810" class="small">главный босс</text>
+
+  <!-- Optional branches -->
+  <path class="side" d="M785 520 L785 690"/><ellipse cx="785" cy="755" rx="130" ry="62" class="node human"/><text x="785" y="748" class="label">СКЛАД</text><text x="785" y="775" class="small">опционально</text>
+  <path class="side" d="M1415 390 L1415 265"/><ellipse cx="1415" cy="195" rx="155" ry="64" class="node human"/><text x="1415" y="188" class="label">ТЕРМИНАЛ +</text><text x="1415" y="216" class="label">ХРАНИЛИЩЕ</text>
+  <path class="side" d="M1720 690 L1720 610 L1510 610"/><ellipse cx="1435" cy="610" rx="95" ry="55" class="node human"/><text x="1435" y="605" class="label">СКЛАД</text><text x="1435" y="630" class="small">опционально</text>
+  <path class="side" d="M975 855 L975 960"/><ellipse cx="975" cy="995" rx="100" ry="52" class="node human"/><text x="975" y="1002" class="label">СКЛАД</text>
+
+  <!-- Weapon cards -->
+  <g transform="translate(330 555)"><rect class="card" width="190" height="86" rx="9"/><text x="83" y="26" class="cardtext">ПИСТОЛЕТ</text><path class="weapon" d="M22 50h83l14 13h-35l-9 14h-18l6-14H22z"/><path class="weapon" d="M48 63l-8 19h18l8-19"/></g>
+  <g transform="translate(975 292)"><rect class="card" width="230" height="86" rx="9"/><text x="92" y="26" class="cardtext">РПК · НАГРАДА БОССА</text><path class="weapon" d="M18 52h154l30 10h-58l-8 13h-21l5-13H18z"/><path class="weapon" d="M85 62l-8 20h21l8-20"/><path class="weapon" d="M146 51v-16h20v16"/></g>
+  <g transform="translate(705 900)"><rect class="card" width="180" height="86" rx="9"/><text x="76" y="26" class="cardtext">АК</text><path class="weapon" d="M16 52h133l21 10h-52l-9 14H89l7-14H16z"/><path class="weapon" d="M70 61l-6 20h22l5-20"/><path class="weapon" d="M126 51v-15h18v15"/></g>
+  <g transform="translate(1500 130)"><rect class="card" width="205" height="86" rx="9"/><text x="76" y="26" class="cardtext">ДРОБОВИК</text><path class="weapon" d="M18 52h153l19 8h-68l-6 16h-18l4-16H18z"/><path class="weapon" d="M70 60l-10 20h20l10-20"/></g>
+  <g transform="translate(1690 278)"><rect class="card" width="175" height="86" rx="9"/><text x="74" y="27" class="cardtext">ГРАНАТЫ</text><circle cx="43" cy="61" r="16" class="weapon"/><path class="weapon" d="M43 44v-10h13l7 8"/><circle cx="90" cy="61" r="16" class="weapon"/><path class="weapon" d="M90 44v-10h13l7 8"/></g>
+  <g transform="translate(1515 855)"><rect class="card" width="190" height="86" rx="9"/><text x="80" y="26" class="cardtext">РПГ</text><path class="weapon" d="M16 55h130l27-14v28l-27-14H16z"/><path class="weapon" d="M80 55l-8 22h20l8-22"/></g>
+  <g transform="translate(1120 570)"><rect class="card" width="210" height="86" rx="9"/><text x="89" y="26" class="cardtext">ПЕЧЕНЕГ</text><path class="weapon" d="M16 51h158l23 10h-65l-8 15h-20l5-15H16z"/><path class="weapon" d="M74 61l-9 20h22l8-20"/><path class="weapon" d="M140 50v-15h20v15"/></g>
+  <g transform="translate(1460 945)"><rect class="card" width="150" height="62" rx="9"/><text x="53" y="28" class="cardtext">БРОНЯ</text><path d="M19 35l12-12h22l12 12v18H19z" fill="none" stroke="#9bd4df" stroke-width="4"/></g>
+</svg>
